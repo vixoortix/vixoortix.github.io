@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiropedia Salud & Bienestar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('imagenes_quiropedia/fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255,255,255,0.88);
+      z-index: -1;
+    }
+    header {
+      background: linear-gradient(135deg, #a1ffce, #faffd1);
+      padding: 50px 20px;
+      text-align: center;
+      color: #044b4b;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+    h2 {
+      color: #00695c;
+      margin-bottom: 20px;
+    }
+    .services, .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-body h3 {
+      margin-top: 0;
+      color: #00695c;
+    }
+    .price {
+      color: #d84315;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+    .info, .contact, .formulario, .mapa, .extra {
+      background: #ecf9f1;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, select, textarea {
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #00796b;
+      color: white;
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #004d40;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+    footer {
+      background: #00796b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    .whatsapp img {
+      width: 60px;
+      height: 60px;
+    }
+    .faq summary {
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .faq details {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Quiropedia Salud & Bienestar</h1>
+  <p>Expertos en el cuidado y salud de tus pies</p>
+</header>
+
+<section class="info">
+  <h2>¿Qué es la quiropedia?</h2>
+  <p>
+    La quiropedia es una especialidad enfocada en tratar afecciones comunes de los pies como callosidades, uñas encarnadas y resequedad.
+    Mejora tu calidad de vida al caminar con confianza, comodidad y sin dolor.
+  </p>
+</section>
+
+<section class="extra">
+  <h2>Beneficios de la Quiropedia</h2>
+  <ul>
+    <li>✅ Previene infecciones y hongos</li>
+    <li>✅ Alivia el dolor al caminar</li>
+    <li>✅ Mejora la estética y salud de tus pies</li>
+    <li>✅ Evita complicaciones en adultos mayores y diabéticos</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card">
+      <img src="imagenes_quiropedia/uñas_encarnadas.jpg" alt="Uñas encarnadas">
+      <div class="card-body">
+        <h3>Uñas Encarnadas</h3>
+        <p>Tratamiento profesional e indoloro.</p>
+        <div class="price">$25.000</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="imagenes_quiropedia/callos.jpg" alt="Callos">
+      <div class="card-body">
+        <h3>Callos y Durezas</h3>
+        <p>Remoción mecánica sin dolor.</p>
+        <div class="price">$20.000</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="imagenes_quiropedia/spa_podal.jpg" alt="Spa">
+      <div class="card-body">
+        <h3>Spa Podal</h3>
+        <p>Relajación e hidratación profunda.</p>
+        <div class="price">$18.000</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="imagenes_quiropedia/evaluacion.jpg" alt="Evaluación">
+      <div class="card-body">
+        <h3>Evaluación General</h3>
+        <p>Revisión completa de tus pies.</p>
+        <div class="price">$30.000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="extra">
+  <h2>Consejos para el Cuidado de tus Pies</h2>
+  <ul>
+    <li>🧼 Lava y seca bien tus pies todos los días.</li>
+    <li>🧴 Usa crema hidratante podal para evitar grietas.</li>
+    <li>👟 Usa calzado cómodo y del tamaño correcto.</li>
+    <li>🦶 No ignores molestias persistentes.</li>
+  </ul>
+</section>
+
+<section class="extra">
+  <h2>Testimonios</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-body">
+        <p>“Excelente atención, me quitaron el dolor al caminar en solo una sesión. Muy profesionales.”</p>
+        <strong>— Mariana R.</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <p>“Fui con mi madre de 70 años, la trataron con paciencia y cuidado. Recomendado.”</p>
+        <strong>— Andrés L.</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <p>“Nunca había sentido mis pies tan suaves y relajados, volveré pronto.”</p>
+        <strong>— Luisa F.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="extra faq">
+  <h2>Preguntas Frecuentes</h2>
+  <details>
+    <summary>¿El tratamiento duele?</summary>
+    <p>No, se realiza con herramientas especializadas y con máxima higiene para tu comodidad.</p>
+  </details>
+  <details>
+    <summary>¿Atienden adultos mayores?</summary>
+    <p>Sí, somos especialistas en cuidado podológico para personas mayores y con movilidad reducida.</p>
+  </details>
+  <details>
+    <summary>¿Qué debo llevar a la consulta?</summary>
+    <p>Solo necesitas asistir con ropa cómoda. Nosotros nos encargamos del resto.</p>
+  </details>
+</section>
+
+<section class="contact">
+  <h2>Contacto</h2>
+  <p><strong>📞 WhatsApp:</strong> +57 321 835 2460</p>
+  <p><strong>📧 Email:</strong> contacto@quiropediasalud.com</p>
+  <p><strong>📍 Dirección:</strong> Guatire, Estado Miranda, Venezuela</p>
+  <p><strong>🕒 Horario:</strong> Lunes a Sábado, 9:00 AM - 7:00 PM</p>
+</section>
+
+<section class="formulario">
+  <h2>Reserva tu cita por WhatsApp</h2>
+  <form id="whatsappForm" onsubmit="enviarWhatsApp(); return false;">
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
+    <select id="servicio" required>
+      <option value="">Selecciona un servicio</option>
+      <option>Tratamiento de Uñas</option>
+      <option>Callos y Durezas</option>
+      <option>Spa Podal</option>
+      <option>Evaluación Podológica</option>
+    </select>
+    <input type="date" id="fecha" required>
+    <textarea id="mensaje" placeholder="Comentarios adicionales" rows="4"></textarea>
+    <button type="submit">Enviar por WhatsApp</button>
+  </form>
+</section>
+
+<section class="mapa">
+  <h2>¿Dónde estamos?</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=Guatire,+Miranda,+Venezuela&output=embed"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</section>
+
+<footer>
+  © 2025 Quiropedia Salud & Bienestar – Todos los derechos reservados
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="whatsapp" href="https://wa.me/573218352460" target="_blank">
+  <img src="imagenes_quiropedia/whatsapp.png" alt="WhatsApp">
+</a>
+
+<script>
+  function enviarWhatsApp() {
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const servicio = document.getElementById("servicio").value;
+    const fecha = document.getElementById("fecha").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const numeroDestino = "573218352460";
+    const texto = `Hola, soy *${nombre}*.\nDeseo una cita para *${servicio}* el *${fecha}*.\nMi número: *${telefono}*.\nComentarios: ${mensaje}`;
+    const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
